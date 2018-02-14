@@ -6,12 +6,12 @@ from threading import Timer
 
 
 # important paths
-MAPPING34 = "/user/HS204/m09113/my_project_folder/mm_shapes_masks/3448_model/ibug_to_sfm.txt"
-#MODEL34   = "/user/HS204/m09113/my_project_folder/mm_shapes_masks/3448_model/sfm_shape_3448.bin"
-MODEL34   = "/user/HS204/m09113/my_project_folder/mm_shapes_masks/3448_model/surrey_3448_new_mapping.bin"
-CONTOUR34 = "/user/HS204/m09113/my_project_folder/mm_shapes_masks/3448_model/model_contours.json"
-EDGETOP34 = "/user/HS204/m09113/my_project_folder/mm_shapes_masks/3448_model/sfm_3448_edge_topology.json"
-BLENDSH34 = "/user/HS204/m09113/my_project_folder/mm_shapes_masks/3448_model/expression_blendshapes_3448.bin"
+MAPPING34 = "d:/daten/projects/share/ibug_to_sfm.txt"
+MODEL34   = "d:/daten/projects/share/sfm_shape_3448.bin"
+#MODEL34   = "d:/daten/projects/share/surrey_3448_new_mapping.bin"
+CONTOUR34 = "d:/daten/projects/share/model_contours.json"
+EDGETOP34 = "d:/daten/projects/share/sfm_3448_edge_topology.json"
+BLENDSH34 = "d:/daten/projects/share/expression_blendshapes_3448.bin"
 
 MAPPING17 = "/user/HS204/m09113/eos/install/share/ibug_to_sfm.txt"
 MODEL17 = "/vol/vssp/dataweb/faceweb/3dmm/facemodels/shape/sfm_shape_1724.bin"

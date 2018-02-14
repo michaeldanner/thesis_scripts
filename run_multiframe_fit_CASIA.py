@@ -4,11 +4,11 @@ import glob, os, sys
 import eos_starter_lib as esl
 from concurrent.futures import ThreadPoolExecutor
 
-EXE = "/user/HS204/m09113/eos/eos_build14/examples/fit-model-multi-cnn-exp"
+EXE = "D:/Daten/Projects/eos2/x64/Release/eos2.exe"
 
 LOGNAME = "fitting.log"
 
-OUTPUTBASE = "/user/HS204/m09113/my_project_folder/CASIA_webface/multi_fit_CCR_iter75_reg30_256/"
+OUTPUTBASE = "D:/CASIA/multi_fit_CCR_iter75_reg30_256/"
 
 message = ""
 
@@ -16,9 +16,8 @@ OVERWRITE = True
 
 
 
-
-id_folders = glob.glob("/user/HS204/m09113/my_project_folder/CASIA_webface/landmarks/*")
-images_base = '/vol/vssp/datasets/still/CASIA-WebFace/CASIA-WebFace/'
+id_folders = glob.glob("D:/CASIA/landmarks/*")
+images_base = 'D:/CASIA/cwf/'
 
 with ThreadPoolExecutor(max_workers=30) as executor:
 	for n in range(0,len(id_folders)):
@@ -56,7 +55,7 @@ with ThreadPoolExecutor(max_workers=30) as executor:
 	
 			# prepare multi image fit command
 			cmd = esl.assemble_command(EXE, lms, imgs, outputfolder, regularisation=30.0, iterations=75)
-	
+			cmd = cmd.replace("\\", "/")
 			# print id and start cmd
 			executor.submit(esl.start_and_log,"multiframe fitting on "+message, cmd, None, log=outputfolder+LOGNAME) #21600
 			
